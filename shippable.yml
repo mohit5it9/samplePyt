@@ -12,7 +12,7 @@ build:
 
 integrations:
     notifications:
-        - integrationName: pranay-slacl
+        - integrationName: pranay-slack
           type: slack
           recipients:
             - '#test_interns'
