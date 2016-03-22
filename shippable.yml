@@ -9,3 +9,10 @@ python:
 build:
   ci:
     - python --version
+
+integrations:
+    notifications:
+        - integrationName: pranay-slacl
+          type: slack
+          recipients:
+            - '#test_interns'
