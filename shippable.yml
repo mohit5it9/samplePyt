@@ -16,6 +16,8 @@ integrations:
           type: slack
           recipients:
             - '#test_interns'
+            - '#test-interns-2'
+            - '#test-interns-3'
           on_start: always
           on_success: always
           on_failure: always
