@@ -17,7 +17,8 @@ integrations:
           recipients:
             - '#test_interns'
             - '#test-interns-2'
-            - '#test-interns-3'
+            - room: '#test-interns-3'
+              notify: true
           on_start: always
           on_success: always
           on_failure: always
