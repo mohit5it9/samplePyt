@@ -12,13 +12,11 @@ build:
 
 integrations:
     notifications:
-        - integrationName: pranay-slack
-          type: slack
+        - integrationName: pranay-hipchat
+          type: hipchat
           recipients:
             - '#test_interns'
-            - '#test-interns-2'
-            - room: '#test-interns-3'
-              notify: true
+            - '@PranayPareek'
           on_start: always
           on_success: always
           on_failure: always
