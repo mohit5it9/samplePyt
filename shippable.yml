@@ -15,6 +15,7 @@ integrations:
         - integrationName: pranay-hipchat
           type: hipchat
           recipients:
+            - '#Ship-aye'
             - '#Pillar%20of%20Autumn'
             - '@PranayPareek'
           on_start: always
