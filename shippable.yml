@@ -16,7 +16,7 @@ integrations:
           type: hipchat
           recipients:
             - '#Ship-aye'
-            - '#Pillar%20of%20Autumn'
+            - '#Pillar of Autumn'
             - '@PranayPareek'
           on_start: always
           on_success: always
