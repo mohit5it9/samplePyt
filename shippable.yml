@@ -7,8 +7,8 @@ python:
   - 2.7
 env:
   global:
-    - STAR="Wars" 
-    - Han="Solo"
+    - FOO1="BAR1" 
+    - FOO2="BAR2"
 
 build:
   ci:
