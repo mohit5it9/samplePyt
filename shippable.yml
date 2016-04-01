@@ -7,8 +7,8 @@ python:
   - 2.7
 
 env:
-  - FOO="bar1"
-  - FOO="bar2"
+  - FOO1="bar1"
+  - FOO2="bar2"
 
 build:
   ci:
