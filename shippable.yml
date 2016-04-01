@@ -6,10 +6,6 @@ language: python
 python:
   - 2.7
 
-env:
-  matrix:
-  global:
-
 build:
   ci:
     - python --version
