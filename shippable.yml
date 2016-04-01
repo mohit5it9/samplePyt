@@ -9,6 +9,7 @@ python:
 env:
   - FOO1="bar1"
   - FOO2="bar2"
+
   global:
     - FOO="bar"
     - FIZZ="buzz"
