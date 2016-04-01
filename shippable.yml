@@ -11,8 +11,8 @@ env:
     - FOO="bar"
     - FIZZ="buzz"
   matrix:
-  - FOO1="bar1"
-  - FOO2="bar2"
+    - FOO1="bar1"
+    - FOO2="bar2"
 
 build:
   ci:
