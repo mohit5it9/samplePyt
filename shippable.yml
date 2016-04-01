@@ -6,8 +6,6 @@ language: python
 python:
   - 2.7
 
-env:
-
 build:
   ci:
     - python --version
