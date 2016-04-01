@@ -7,12 +7,12 @@ python:
   - 2.7
 
 env:
-  - FOO1="bar1"
-  - FOO2="bar2"
-
   global:
     - FOO="bar"
     - FIZZ="buzz"
+  matrix:
+  - FOO1="bar1"
+  - FOO2="bar2"
 
 build:
   ci:
