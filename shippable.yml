@@ -6,11 +6,6 @@ language: python
 python:
   - 2.7
 
-env:
-  matrix:
-   - FOO1="bar1" FOO2="bar2"
-   - FOO3="bar3" FOO4="bar4"
-
 build:
   ci:
     - python --version
