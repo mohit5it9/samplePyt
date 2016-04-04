@@ -24,6 +24,7 @@ integrations:
       branches:
         only:
           - master
+  
   notifications:
     - integrationName: pranay-hipchat
       type: hipchat
@@ -34,10 +35,17 @@ integrations:
       on_success: always
       on_failure: always
       on_pull_request: always
-    - integrationName: pranay-slack
-      type: slack
-      recipients:
-        - '#test_interns'
+  
+  post_ci_tigger:
+    - integrationName: pranay-postci
+      type: project
+      payload:
+        - NEXT_PROJECT=true
+        - BUILD_NUM=$SHIPPABLE_BUILD_NUMBER
+       branches:
+         only:
+           - master
+           - dev
       on_start: always
       on_success: always
       on_failure: always
