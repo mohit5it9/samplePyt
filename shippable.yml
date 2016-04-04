@@ -8,6 +8,7 @@ python:
 
 build:
   pre_ci:
+    - python --version
     - docker build -t=pranay/samplePyt .
 
   pre_ci_boot:
@@ -15,10 +16,6 @@ build:
     image_tag: latest
     pull: false
     options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
-
-build:
-  ci:
-    - python --version
 
 integrations:
   hub:
