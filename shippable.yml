@@ -4,15 +4,44 @@ language: python
 
 # Version number
 python:
-  - 2.6
   - 2.7
-  - 3.2
-  - 3.3
-  - 3.4
-  - 3.5
-  - pypy
-  - pypy3
+
+build:
+  pre_ci:
+    - docker build -t=pranay/samplePyt .
+
+  pre_ci_boot:
+    image_name: drydock/u14pyt
+    image_tag: latest
+    pull: false
+    options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
 
 build:
   ci:
     - python --version
+
+integrations:
+  hub:
+    - integrationName: docker-pranay
+      type: docker
+      branches:
+        only:
+          - master
+  notifications:
+    - integrationName: pranay-hipchat
+      type: hipchat
+      recipients:
+        - '#Pillar%20of%20Autumn'
+        - '@PranayPareek'
+      on_start: always
+      on_success: always
+      on_failure: always
+      on_pull_request: always
+    - integrationName: pranay-slack
+      type: slack
+      recipients:
+        - '#test_interns'
+      on_start: always
+      on_success: always
+      on_failure: always
+      on_pull_request: always
