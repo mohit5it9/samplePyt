@@ -9,7 +9,7 @@ python:
 build:
   pre_ci:
     - python --version
-    - docker build -t=pranay/samplePyt .
+    - docker build -t=pranay/samplepyt .
 
   pre_ci_boot:
     image_name: drydock/u14pyt
