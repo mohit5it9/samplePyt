@@ -16,3 +16,30 @@ python:
 build:
   ci:
     - python --version
+
+integrations:
+  notifications:
+    - integrationName: pranay-hipchat
+      type: hipchat
+      recipients:
+        - '#Pillar%20of%20Autumn'
+        - '@PranayPareek'
+      on_start: always
+      on_success: always
+      on_failure: always
+      on_pull_request: always
+  
+  post_ci_tigger:
+    - integrationName: pranay-postci
+      type: project
+      payload:
+        - NEXT_PROJECT=true
+        - BUILD_NUM=$SHIPPABLE_BUILD_NUMBER
+      branches:
+        only:
+          - master
+          - dev
+      on_start: always
+      on_success: always
+      on_failure: always
+      on_pull_request: always
