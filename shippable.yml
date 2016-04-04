@@ -22,7 +22,7 @@ integrations:
       on_failure: always
       on_pull_request: always
   
-  post_ci_tigger:
+  post_ci_trigger:
     - integrationName: pranay-postci
       type: project
       payload:
