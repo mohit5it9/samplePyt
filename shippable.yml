@@ -20,7 +20,7 @@ integrations:
           recipients:
             - '#Pillar%20of%20Autumn'
             - '@PranayPareek'
-            - '
+            - '#shippable'
           on_start: always
           on_success: always
           on_failure: always
