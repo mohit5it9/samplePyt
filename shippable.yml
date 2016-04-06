@@ -4,15 +4,24 @@ language: python
 
 # Version number
 python:
-  - 2.6
   - 2.7
-  - 3.2
-  - 3.3
-  - 3.4
-  - 3.5
-  - pypy
-  - pypy3
 
 build:
   ci:
     - python --version
+
+integrations:
+  notifications:
+    - integrationName: pranay-project-trigger
+      type: project_trigger
+      payload:
+        - NEXT_PROJECT=true
+        - BUILD_NUM=$SHIPPABLE_BUILD_NUMBER
+      branches:
+        only:
+          - master
+          - post_ci_notifications
+      on_start: always
+      on_success: always
+      on_failure: always
+      on_pull_request: always
