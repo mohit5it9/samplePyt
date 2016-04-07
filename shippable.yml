@@ -36,3 +36,16 @@ integrations:
       on_success: always
       on_failure: always
       on_pull_request: always
+    - integrationName: pranay-project-trigger-2
+      type: project_trigger
+      payload:
+        - NEXT_PROJECT=true
+        - BUILD_NUM=$SHIPPABLE_BUILD_NUMBER
+      branches:
+        only:
+          - master
+          - post_ci_notifications
+      on_start: never
+      on_success: change
+      on_failure: change
+      on_pull_request: never
