@@ -16,6 +16,7 @@ integrations:
     - integrationName: slack
       type: slack
       recipients:
-        - #guilty_spark
+        - "#guilty_spark"
+        - "#test_interns"
       on_success: never
       on_failure: always
