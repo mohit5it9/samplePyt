@@ -4,15 +4,19 @@ language: python
 
 # Version number
 python:
-  - 2.6
   - 2.7
   - 3.2
-  - 3.3
-  - 3.4
-  - 3.5
-  - pypy
-  - pypy3
 
 build:
   ci:
     - python --version
+    - if [ "$SHIPPABLE_PYTHON_VERSION" == "3.2" ]; then foobar; fi
+    
+integrations:
+  notifications:
+    - integrationName: slack
+      type: slack
+      recipients:
+        - #dev
+      on_success: never
+      on_failure: always
