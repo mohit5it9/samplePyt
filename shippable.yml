@@ -11,6 +11,8 @@ build:
   ci:
     - python --version
     - ls
+    - cd shippable
+    - ls
 
 integrations:
   notifications:
