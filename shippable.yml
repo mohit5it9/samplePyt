@@ -12,6 +12,7 @@ build:
     - python --version
     - ls
     - cd shippable
+    - pwd
     - ls
 
 integrations:
