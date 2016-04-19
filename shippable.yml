@@ -10,6 +10,7 @@ python:
 build:
   ci:
     - python --version
+    - ll
 
 integrations:
   notifications:
