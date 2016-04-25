@@ -54,7 +54,7 @@ integrations:
         only:
           - master
           - post_ci_webhook
-      on_start: never
-      on_success: change
-      on_failure: change
-      on_pull_request: never
+      on_start: always
+      on_success: always
+      on_failure: always
+      on_pull_request: always
