@@ -40,10 +40,6 @@ integrations:
         only:
           - master
           - post_ci_notifications
-      on_start: always
-      on_success: always
-      on_failure: always
-      on_pull_request: always
     - integrationName: pranay-project-trigger-2
       type: project_trigger
       payload:
@@ -54,7 +50,3 @@ integrations:
         only:
           - master
           - post_ci_notifications
-      on_start: never
-      on_success: change
-      on_failure: change
-      on_pull_request: never
