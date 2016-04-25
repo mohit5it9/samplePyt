@@ -27,7 +27,7 @@ integrations:
         on_failure: always
         on_pull_request: always
   post_ci_trigger:
-    - integrationName: pranay-project-trigger
+    - integrationName: pranay-webhook
       type: webhook
       payload:
         - NEXT_PROJECT=true
@@ -44,7 +44,7 @@ integrations:
       on_success: always
       on_failure: always
       on_pull_request: always
-    - integrationName: pranay-project-trigger-2
+    - integrationName: pranay-webhook-2
       type: webhook
       payload:
         - NEXT_PROJECT=true
