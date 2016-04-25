@@ -41,7 +41,7 @@ integrations:
           - master
           - post_ci_webhook
       on_start: always
-      on_success: always
+      on_success: never
       on_failure: always
       on_pull_request: always
     - integrationName: pranay-webhook-2
@@ -55,6 +55,6 @@ integrations:
           - master
           - post_ci_webhook
       on_start: always
-      on_success: always
+      on_success: never
       on_failure: always
       on_pull_request: always
