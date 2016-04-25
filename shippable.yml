@@ -40,10 +40,6 @@ integrations:
         only:
           - master
           - post_ci_webhook
-      on_start: always
-      on_success: never
-      on_failure: always
-      on_pull_request: always
     - integrationName: pranay-webhook-2
       type: webhook
       payload:
@@ -54,7 +50,3 @@ integrations:
         only:
           - master
           - post_ci_webhook
-      on_start: always
-      on_success: always
-      on_failure: always
-      on_pull_request: always
