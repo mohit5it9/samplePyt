@@ -39,7 +39,7 @@ integrations:
       branches:
         only:
           - master
-          - post_ci_notifications
+          - post_ci_webhook
       on_start: always
       on_success: always
       on_failure: always
@@ -53,7 +53,7 @@ integrations:
       branches:
         only:
           - master
-          - post_ci_notifications
+          - post_ci_webhook
       on_start: never
       on_success: change
       on_failure: change
