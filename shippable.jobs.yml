@@ -2,9 +2,9 @@ jobs:
   - name: gke-man-1
     type: manifest
     steps:
-      - GET: gke-nginx
-      - GET: image-opts
-      - GET: trigger-gke-man
+      - GET: gke-nginx-1
+      - GET: image-opts-1
+      - GET: trigger-gke-man-1
 
   - name: gke-beta-deploy-1
     type: gkeDeploy
