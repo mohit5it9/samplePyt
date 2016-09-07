@@ -3,11 +3,11 @@ language: python # I dont use any language, python is choosen randomly
 build:
   ci:
     - pip install -U docker-compose
-    - docker-compose -f docker-compose.test.yml up -d myservice mongodb && sleep 10
-    - docker-compose -f docker-compose.test.yml build app
-    - docker-compose -f docker-compose.test.yml run app ls -lah /    # it shows directories, including /app
-    - docker-compose -f docker-compose.test.yml run app ls -lah /app # it's empty
-    - docker-compose -f docker-compose.test.yml run app rake test    # fails, because it cannot find the file Gemfile
+    - docker-compose -f docker-compose.yml
+    - docker-compose -f docker-compose.yml build app
+    - docker-compose -f docker-compose.yml run app ls -lah /    # it shows directories, including /app
+    - docker-compose -f docker-compose.yml run app ls -lah /app # it's empty
+    - docker-compose -f docker-compose.yml run app rake test    # fails, because it cannot find the file Gemfile
 
 integrations:
   hub:
