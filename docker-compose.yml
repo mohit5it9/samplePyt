@@ -1,8 +1,9 @@
+version: '2'
+
 services:
   app:
     build:
       context: .
       dockerfile: Dockerfile.dev
-    command: rake test
     volumes:
       - .:/app
